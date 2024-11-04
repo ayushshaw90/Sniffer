@@ -71,8 +71,8 @@ pub fn header(sniffer: &Sniffer) -> Container<'static, Message, StyleType> {
             } else {
                 Container::new(Space::with_width(40))
             })
-            .push(horizontal_space())
-            .push(get_button_settings(font, language, last_opened_setting)),
+            .push(horizontal_space()),
+            // .push(get_button_settings(font, language, last_opened_setting)),
     )
     .height(80)
     .align_y(Vertical::Center)
