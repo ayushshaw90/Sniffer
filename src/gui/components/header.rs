@@ -45,12 +45,12 @@ pub fn header(sniffer: &Sniffer) -> Container<'static, Message, StyleType> {
     let last_opened_setting = sniffer.last_opened_setting;
     let is_running = sniffer.running_page.ne(&RunningPage::Init);
 
-    let logo = Icon::Sniffnet
-        .to_text()
-        .vertical_alignment(Vertical::Center)
-        .height(Length::Fill)
-        .line_height(LineHeight::Relative(0.8))
-        .size(90);
+    // let logo = Icon::Sniffnet
+    //     .to_text()
+    //     .vertical_alignment(Vertical::Center)
+    //     .height(Length::Fill)
+    //     .line_height(LineHeight::Relative(0.8))
+    //     .size(90);
 
     Container::new(
         Row::new()
@@ -64,7 +64,7 @@ pub fn header(sniffer: &Sniffer) -> Container<'static, Message, StyleType> {
             .push(horizontal_space())
             .push(Container::new(Space::with_width(40)))
             .push(Space::with_width(20))
-            .push(logo)
+            // .push(logo)
             .push(Space::with_width(20))
             .push(if is_running {
                 Container::new(get_button_minimize(font, language, false))

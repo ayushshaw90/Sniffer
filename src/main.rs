@@ -48,8 +48,8 @@ mod secondary_threads;
 mod translations;
 mod utils;
 
-pub const SNIFFNET_LOWERCASE: &str = "sniffnet";
-pub const SNIFFNET_TITLECASE: &str = "Sniffnet";
+pub const SNIFFNET_LOWERCASE: &str = "packettracer";
+pub const SNIFFNET_TITLECASE: &str = "PacketTracer";
 
 /// Entry point of application execution
 ///
