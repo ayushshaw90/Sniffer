@@ -4,7 +4,7 @@ use iced::alignment::{Horizontal, Vertical};
 use iced::widget::text::LineHeight;
 use iced::widget::tooltip::Position;
 use iced::widget::{button, horizontal_space, Container, Row, Space, Text, Tooltip};
-use iced::{Alignment, Font, Length};
+use iced::{Alignment, Font};
 
 use crate::configs::types::config_settings::ConfigSettings;
 use crate::gui::components::tab::notifications_badge;
@@ -183,17 +183,17 @@ fn thumbnail_header(
             .push(Text::new(SNIFFNET_TITLECASE).font(font_headers))
             .push(Space::with_width(10))
             .push(get_button_minimize(font, language, true))
-            .push(horizontal_space())
-            .push(if unread_notifications > 0 {
-                Container::new(
-                    notifications_badge(font, unread_notifications)
-                        .style(ContainerType::HighlightedOnHeader),
-                )
-                .width(40)
-                .align_x(Horizontal::Center)
-            } else {
-                Container::new(Space::with_width(40))
-            }),
+            .push(horizontal_space()),
+            // .push(if unread_notifications > 0 {
+            //     Container::new(
+            //         notifications_badge(font, unread_notifications)
+            //             .style(ContainerType::HighlightedOnHeader),
+            //     )
+            //     .width(40)
+            //     .align_x(Horizontal::Center)
+            // } else {
+            //     Container::new(Space::with_width(40))
+            // }),
     )
     .height(30)
     .align_y(Vertical::Center)

@@ -12,7 +12,7 @@ use crate::gui::components::types::my_modal::MyModal;
 use crate::gui::pages::connection_details_page::connection_details_page;
 use crate::gui::pages::initial_page::initial_page;
 use crate::gui::pages::inspect_page::inspect_page;
-use crate::gui::pages::notifications_page::notifications_page;
+// use crate::gui::pages::notifications_page::notifications_page;
 use crate::gui::pages::overview_page::overview_page;
 use crate::gui::pages::settings_general_page::settings_general_page;
 use crate::gui::pages::settings_notifications_page::settings_notifications_page;
@@ -67,7 +67,7 @@ impl Application for Sniffer {
                 RunningPage::Init => initial_page(self),
                 RunningPage::Overview => overview_page(self),
                 RunningPage::Inspect => inspect_page(self),
-                RunningPage::Notifications => notifications_page(self),
+                // RunningPage::Notifications => notifications_page(self),
             }
         };
 

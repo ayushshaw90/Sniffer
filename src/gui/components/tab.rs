@@ -26,7 +26,7 @@ pub fn get_settings_tabs(
 
     for page in &SettingsPage::ALL {
         let active = page.eq(&active);
-        tabs = tabs.push(new_settings_tab(*page, active, language, font));
+        // tabs = tabs.push(new_settings_tab(*page, active, language, font));
     }
     tabs
 }
@@ -46,11 +46,7 @@ pub fn get_pages_tabs(
 
     for page in &RunningPage::ALL {
         let active = page.eq(&active);
-        let unread = if page.eq(&RunningPage::Notifications) {
-            Some(unread_notifications)
-        } else {
-            None
-        };
+        let unread = None;
         tabs = tabs.push(new_page_tab(
             *page,
             active,

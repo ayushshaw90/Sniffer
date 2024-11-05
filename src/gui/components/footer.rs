@@ -5,8 +5,8 @@ use std::sync::{Arc, Mutex};
 use iced::alignment::{Horizontal, Vertical};
 // use iced::widget::text::LineHeight;
 // use iced::widget::tooltip::Position;
-use iced::widget::{button, Container, Row, Text, Tooltip};
-use iced::widget::{horizontal_space, Space};
+use iced::widget::{ Container, Row, Text};
+use iced::widget::{horizontal_space};
 use iced::{Alignment, Font, Length};
 
 // use crate::gui::components::button::row_open_link_tooltip;
@@ -21,7 +21,7 @@ use crate::gui::types::message::Message;
 // use crate::utils::formatted_strings::APP_VERSION;
 // use crate::utils::types::icon::Icon;
 // use crate::utils::types::web_page::WebPage;
-use crate::{Language, SNIFFNET_TITLECASE};
+use crate::{Language};
 
 pub fn footer(
     thumbnail: bool,

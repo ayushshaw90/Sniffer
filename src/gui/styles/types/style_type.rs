@@ -25,7 +25,7 @@ pub enum StyleType {
 
 impl Default for StyleType {
     fn default() -> Self {
-        Self::Night
+        Self::Day
     }
 }
 
@@ -44,7 +44,7 @@ impl application::StyleSheet for StyleType {
 impl StyleType {
     pub fn get_palette(self) -> Palette {
         match self {
-            StyleType::Night => NIGHT_PALETTE,
+            StyleType::Night => DAY_PALETTE,
             StyleType::Day => DAY_PALETTE,
             StyleType::DeepSea => DEEP_SEA_PALETTE,
             StyleType::MonAmour => MON_AMOUR_PALETTE,
@@ -54,7 +54,7 @@ impl StyleType {
 
     pub fn get_extension(self) -> PaletteExtension {
         match self {
-            StyleType::Night => NIGHT_PALETTE_EXTENSION,
+            StyleType::Night => DAY_PALETTE_EXTENSION,
             StyleType::Day => DAY_PALETTE_EXTENSION,
             StyleType::DeepSea => DEEP_SEA_PALETTE_EXTENSION,
             StyleType::MonAmour => MON_AMOUR_PALETTE_EXTENSION,
@@ -84,7 +84,7 @@ mod tests {
     // simple case: one of the default themes
     #[test]
     fn test_working_style_type_round_trip_1() {
-        let style = StyleType::Night;
+        let style = StyleType::Day;
         assert_tokens(
             &style,
             &[
@@ -95,7 +95,7 @@ mod tests {
                 Token::Str("style"),
                 Token::UnitVariant {
                     name: "StyleType",
-                    variant: "Night",
+                    variant: "Day",
                 },
                 Token::StructEnd,
             ],
