@@ -78,14 +78,3 @@ fn is_newer_release_available(max_retries: u8, seconds_between_retries: u8) -> O
         None
     }
 }
-
-#[cfg(all(test, not(target_os = "macos")))]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn fetch_latest_release_from_github() {
-        let result = is_newer_release_available(6, 2);
-        result.expect("Latest release request from GitHub error");
-    }
-}

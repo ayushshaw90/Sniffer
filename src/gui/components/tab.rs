@@ -13,23 +13,7 @@ use crate::gui::styles::text::TextType;
 use crate::gui::types::message::Message;
 use crate::{Language, RunningPage, StyleType};
 
-// pub fn get_settings_tabs(
-//     // active: SettingsPage,
-//     // font: Font,
-//     // language: Language,
-// ) -> Row<'static, Message, StyleType> {
-//     let tabs = Row::new()
-//         .width(Length::Fill)
-//         .align_items(Alignment::Start)
-//         .spacing(2)
-//         .padding([0, 3]);
 
-//     for page in &SettingsPage::ALL {
-//         // let active = page.eq(&active);
-//         // tabs = tabs.push(new_settings_tab(*page, active, language, font));
-//     }
-//     tabs
-// }
 
 pub fn get_pages_tabs(
     active: RunningPage,
@@ -117,54 +101,6 @@ fn new_page_tab(
         })
         .on_press(page.action())
 }
-
-// fn new_settings_tab(
-//     page: SettingsPage,
-//     active: bool,
-//     language: Language,
-//     font: Font,
-// ) -> Button<'static, Message, StyleType> {
-//     let content = Row::new()
-//         .height(Length::Fill)
-//         .align_items(Alignment::Center)
-//         .push(horizontal_space())
-//         .push(
-//             page.icon()
-//                 .size(15)
-//                 .style(if active {
-//                     TextType::Title
-//                 } else {
-//                     TextType::Standard
-//                 })
-//                 .horizontal_alignment(alignment::Horizontal::Center)
-//                 .vertical_alignment(alignment::Vertical::Center),
-//         )
-//         .push(Space::with_width(10))
-//         .push(
-//             Text::new(page.get_tab_label(language).to_string())
-//                 .font(font)
-//                 .size(FONT_SIZE_SUBTITLE)
-//                 .style(if active {
-//                     TextType::Title
-//                 } else {
-//                     TextType::Standard
-//                 })
-//                 .horizontal_alignment(alignment::Horizontal::Center)
-//                 .vertical_alignment(alignment::Vertical::Center),
-//         )
-//         .push(horizontal_space());
-
-//     button(content)
-//         .height(if active { 35 } else { 30 })
-//         .padding(0)
-//         .width(Length::Fill)
-//         .style(if active {
-//             ButtonType::TabActive
-//         } else {
-//             ButtonType::TabInactive
-//         })
-//         // .on_press(page.action())
-// }
 
 pub fn notifications_badge(
     font_headers: Font,
