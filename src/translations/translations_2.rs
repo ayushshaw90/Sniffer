@@ -2,30 +2,6 @@
 
 use crate::Language;
 
-pub fn new_version_available_translation(language: Language) -> &'static str {
-    match language {
-        Language::EN => "A newer version is available!",
-        Language::IT => "Una versione più recente è disponibile!",
-        Language::RU => "Новая версия доступна!",
-        Language::EL => "Μια νεότερη έκδοση είναι διαθέσιμη!",
-        // Language::FA => "یک نسخه جدیدتر روی GitHub موجود است",
-        Language::SV => "En nyare version finns tillgänglig!",
-        Language::FI => "Uudempi versio saatavilla!",
-        Language::DE => "Eine neue Version ist verfügbar!",
-        Language::TR => "Daha yeni bir versiyon mevcut!",
-        Language::ES => "Hay una nueva versión disponible!",
-        Language::KO => "새로운 버전이 출시되었습니다!",
-        Language::ZH => "新版本已在 Github 发布!",
-        Language::UK => "Нова версія доступна!",
-        Language::RO => "O versiune nouă este disponibilă!",
-        Language::PL => "Nowsza wersja jest dostępna!",
-        Language::FR => "Une nouvelle version est disponible!",
-        Language::JA => "新しいバージョンが利用可能になりました!",
-        Language::UZ => "Yangi versiya mavjud!",
-        Language::PT => "Uma nova versão está disponível!",
-        Language::VI => "Phiên bản mới đã sẵn sàng!",
-    }
-}
 
 pub fn inspect_translation(language: Language) -> &'static str {
     match language {
@@ -177,28 +153,6 @@ pub fn only_top_30_items_translation(language: Language) -> &'static str {
     }
 }
 
-// pub fn sort_by_translation(language: Language) -> &'static str {
-//     match language {
-//         Language::EN => "Sort by",
-//         Language::IT => "Ordina per",
-//         Language::RU => "Сортировка",
-//         Language::SV => "Sortera efter",
-//         Language::FI => "Järjestä",
-//         Language::DE => "Sortieren nach",
-//         Language::TR => "Şuna göre sırala",
-//         // Language::FA => "مرتب سازی بر اساس",
-//         Language::ES | Language::PT => "Ordenar por",
-//         Language::KO => "정렬",
-//         Language::ZH => "排序",
-//         Language::UK => "Сортувати за",
-//         Language::RO => "Filtrează după",
-//         Language::PL => "Sortuj według",
-//         Language::FR => "Trier par",
-//         Language::JA => "ソート",
-//         Language::UZ => "Saralash turi",
-//         _ => "Sort by",
-//     }
-// }
 
 pub fn local_translation(language: Language) -> &'static str {
     match language {

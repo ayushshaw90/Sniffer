@@ -5,27 +5,7 @@ use iced::widget::Text;
 use crate::translations::translations::network_adapter_translation;
 use crate::{Language, StyleType};
 
-// This is referred to settings (General settings)
-pub fn general_translation(language: Language) -> &'static str {
-    match language {
-        Language::EN | Language::RO => "General",
-        // Language::FA => "عمومی",
-        Language::ES => "Generales",
-        Language::IT => "Generali",
-        Language::FR => "Général",
-        Language::DE => "Allgemein",
-        Language::PL => "Ogólne",
-        Language::RU => "Общие",
-        Language::JA => "一般",
-        Language::UZ => "Asosiy",
-        Language::SV => "Allmänt",
-        Language::VI => "Tổng quan",
-        Language::ZH => "通用",
-        Language::KO => "일반",
-        Language::TR => "Genel",
-        _ => "General",
-    }
-}
+
 
 pub fn zoom_translation(language: Language) -> &'static str {
     match language {
