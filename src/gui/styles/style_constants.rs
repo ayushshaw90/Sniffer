@@ -34,22 +34,7 @@ pub const NIGHT_PALETTE: Palette = Palette {
     text_body: Color::WHITE,
 };
 
-pub const BUTTONS_NIGHT: Color = Color {
-    r: 0.12,
-    g: 0.12,
-    b: 0.12,
-    a: 1.0,
-};
 
-pub const NIGHT_PALETTE_EXTENSION: PaletteExtension = PaletteExtension {
-    is_nightly: true,
-    font: SARASA_MONO,
-    font_headers: SARASA_MONO_BOLD,
-    alpha_chart_badge: 0.15,
-    alpha_round_borders: 0.4,
-    alpha_round_containers: 0.3,
-    buttons_color: BUTTONS_NIGHT,
-};
 
 // day theme
 const PRIMARY_DAY: Color = Color::WHITE;

@@ -13,10 +13,6 @@ pub enum LoggedNotification {
 
 #[derive(Clone)]
 pub struct PacketsThresholdExceeded {
-    pub(crate) threshold: u32,
-    pub(crate) incoming: u32,
-    pub(crate) outgoing: u32,
-    pub(crate) timestamp: String,
 }
 
 #[derive(Clone)]

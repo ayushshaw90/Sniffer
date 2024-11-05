@@ -33,10 +33,6 @@ pub fn notify_and_log(
             }
             runtime_data.logged_notifications.push_front(
                 LoggedNotification::PacketsThresholdExceeded(PacketsThresholdExceeded {
-                    threshold: notifications.packets_notification.previous_threshold,
-                    incoming: received_packets_entry.try_into().unwrap(),
-                    outgoing: sent_packets_entry.try_into().unwrap(),
-                    timestamp: Local::now().to_string().get(11..19).unwrap().to_string(),
                 }),
             );
             if notifications.packets_notification.sound.ne(&Sound::None) {
