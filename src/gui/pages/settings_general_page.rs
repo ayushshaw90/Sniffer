@@ -9,9 +9,7 @@ use iced::widget::{
 use iced::{Alignment, Font, Length};
 
 use crate::gui::components::button::{button_open_file, row_open_link_tooltip};
-use crate::gui::components::tab::get_settings_tabs;
 use crate::gui::pages::settings_notifications_page::settings_header;
-use crate::gui::pages::types::settings_page::SettingsPage;
 use crate::gui::styles::button::ButtonType;
 use crate::gui::styles::container::ContainerType;
 use crate::gui::styles::style_constants::FONT_SIZE_SUBTITLE;
@@ -49,7 +47,7 @@ pub fn settings_general_page(sniffer: &Sniffer) -> Container<Message, StyleType>
             color_gradient,
             language,
         ))
-        .push(get_settings_tabs(SettingsPage::General, font, language))
+        // .push(get_settings_tabs(SettingsPage::General, font, language))
         .push(Space::with_height(10))
         .push(column_all_general_setting(sniffer, font));
 

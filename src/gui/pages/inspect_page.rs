@@ -55,7 +55,7 @@ pub fn inspect_page(sniffer: &Sniffer) -> Container<Message, StyleType> {
         font,
         font_headers,
         language,
-        sniffer.unread_notifications,
+        // sniffer.unread_notifications,
     );
 
     tab_and_body = tab_and_body.push(tabs);

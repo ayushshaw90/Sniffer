@@ -292,11 +292,11 @@ impl Sniffer {
                 }
             }
             Message::HideModal => self.modal = None,
-            Message::OpenSettings(settings_page) => {
-                if self.modal.is_none() {
-                    self.settings_page = Some(settings_page);
-                }
-            }
+            // Message::OpenSettings(settings_page) => {
+            //     if self.modal.is_none() {
+            //         self.settings_page = Some(settings_page);
+            //     }
+            // }
             Message::OpenLastSettings => {
                 if self.modal.is_none() && self.settings_page.is_none() {
                     self.settings_page = Some(self.last_opened_setting);

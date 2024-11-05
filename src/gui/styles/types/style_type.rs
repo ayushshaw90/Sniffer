@@ -5,7 +5,7 @@ use serde::{Deserialize, Serialize};
 
 use crate::gui::styles::style_constants::{
     DAY_PALETTE, DAY_PALETTE_EXTENSION, DEEP_SEA_PALETTE, DEEP_SEA_PALETTE_EXTENSION,
-    MON_AMOUR_PALETTE, MON_AMOUR_PALETTE_EXTENSION, NIGHT_PALETTE, NIGHT_PALETTE_EXTENSION,
+    MON_AMOUR_PALETTE, MON_AMOUR_PALETTE_EXTENSION,
     SARASA_MONO_BOLD,
 };
 use crate::gui::styles::types::custom_palette::ExtraStyles;

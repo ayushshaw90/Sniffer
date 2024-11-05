@@ -1,6 +1,6 @@
 use crate::gui::components::types::my_modal::MyModal;
 use crate::gui::pages::types::running_page::RunningPage;
-use crate::gui::pages::types::settings_page::SettingsPage;
+// use crate::gui::pages::types::settings_page::SettingsPage;
 use crate::gui::styles::types::gradient_type::GradientType;
 use crate::networking::types::host::Host;
 use crate::notifications::types::notifications::Notification;
@@ -51,8 +51,8 @@ pub enum Message {
     Waiting,
     /// Displays a modal
     ShowModal(MyModal),
-    /// Opens the specified settings page
-    OpenSettings(SettingsPage),
+    // /// Opens the specified settings page
+    // OpenSettings(SettingsPage),
     /// Opens the last opened settings page
     OpenLastSettings,
     /// Hides the current modal

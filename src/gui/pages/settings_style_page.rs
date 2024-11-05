@@ -5,9 +5,7 @@ use iced::widget::{Button, Column, Container, Row, Scrollable, Text};
 use iced::{Alignment, Color, Element, Font, Length};
 
 use crate::gui::components::button::button_open_file;
-use crate::gui::components::tab::get_settings_tabs;
 use crate::gui::pages::settings_notifications_page::settings_header;
-use crate::gui::pages::types::settings_page::SettingsPage;
 use crate::gui::styles::button::ButtonType;
 use crate::gui::styles::container::ContainerType;
 use crate::gui::styles::rule::RuleType;
@@ -51,7 +49,6 @@ pub fn settings_style_page(sniffer: &Sniffer) -> Container<Message, StyleType> {
             color_gradient,
             language,
         ))
-        .push(get_settings_tabs(SettingsPage::Appearance, font, language))
         .push(Space::with_height(15))
         .push(
             appearance_title_translation(language)

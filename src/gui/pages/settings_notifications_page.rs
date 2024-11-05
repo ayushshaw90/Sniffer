@@ -5,8 +5,6 @@ use iced::widget::{Checkbox, Column, Container, Row, Scrollable, Space, Text, Te
 use iced::{Alignment, Font, Length};
 
 use crate::gui::components::button::button_hide;
-use crate::gui::components::tab::get_settings_tabs;
-use crate::gui::pages::types::settings_page::SettingsPage;
 use crate::gui::styles::button::ButtonType;
 use crate::gui::styles::container::ContainerType;
 use crate::gui::styles::scrollbar::ScrollbarType;
@@ -44,11 +42,6 @@ pub fn settings_notifications_page(sniffer: &Sniffer) -> Container<Message, Styl
             font,
             font_headers,
             color_gradient,
-            language,
-        ))
-        .push(get_settings_tabs(
-            SettingsPage::Notifications,
-            font,
             language,
         ))
         .push(Space::with_height(15))
